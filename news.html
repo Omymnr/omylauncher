@@ -6,72 +6,94 @@
     <title>Noticias del Servidor</title>
     <style>
         body {
-            background-color: rgba(0, 0, 0, 0.0); /* fondo transparente/negro total */
-            color: #ffffff;
-            font-family: Arial, sans-serif;
+            /* Fondo transparente para que el color de fondo del launcher se vea */
+            background-color: transparent; 
+            /* El color del texto principal es gris claro */
+            color: #d1d1d1; 
+            /* Fuente más común en interfaces de escritorio */
+            font-family: Segoe UI, sans-serif; 
             margin: 0;
-            padding: 20px;
+            padding: 10px;
         }
 
         h1 {
-            color: orange;
-            text-align: center;
-            margin-bottom: 30px;
+            /* Título oculto ya que el launcher ya tiene su propio título */
+            display: none;
         }
 
         .news-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
+            /* Scroll si el contenido es demasiado largo */
+            overflow-y: auto; 
+            height: 100%;
         }
 
         .news-item {
-            background-color: rgba(17, 18, 20, 0.6); /* fondo oscuro semi-transparente */
-            border-left: 4px solid orange;
-            padding: 15px 20px;
-            border-radius: 8px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            /* Fondo del ítem ligeramente oscuro */
+            background-color: rgba(30, 30, 30, 0.7); 
+            border: 1px solid #444;
+            padding: 12px;
+            border-radius: 6px;
+            transition: background-color 0.2s, border-color 0.2s;
         }
 
         .news-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4);
+            /* Un efecto sutil al pasar el ratón */
+            background-color: rgba(45, 45, 45, 0.8);
+            border-color: #f39c12;
         }
 
         .news-title {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
-            color: orange;
-            margin-bottom: 5px;
+            /* Color que contrasta con el tema oscuro */
+            color: #f39c12; 
+            margin-bottom: 4px;
         }
 
         .news-date {
-            font-size: 12px;
-            color: #AAAAAA;
-            margin-bottom: 10px;
+            font-size: 11px;
+            color: #a0a0a0;
+            margin-bottom: 8px;
         }
 
         .news-content {
-            font-size: 14px;
-            line-height: 1.5;
+            font-size: 13px;
+            line-height: 1.4;
         }
 
         a {
-            color: #0EFF00;
-            text-decoration: underline;
+            /* Enlaces del mismo color que los títulos */
+            color: #f39c12; 
+            text-decoration: none;
         }
 
         a:hover {
-            color: orange;
+            text-decoration: underline;
+        }
+
+        /* Estilos de la barra de desplazamiento */
+        .news-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .news-container::-webkit-scrollbar-track {
+            background: #222;
+            border-radius: 10px;
+        }
+
+        .news-container::-webkit-scrollbar-thumb {
+            background-color: #555;
+            border-radius: 10px;
+            border: 2px solid #222;
         }
     </style>
 </head>
 <body>
 
-    <h1>Noticias del Servidor</h1>
-
     <div class="news-container">
-        <!-- Ejemplo de noticia -->
         <div class="news-item">
             <div class="news-title">Actualización 1.2.0</div>
             <div class="news-date">09/09/2025</div>
@@ -81,7 +103,6 @@
             </div>
         </div>
 
-        <!-- Segunda noticia -->
         <div class="news-item">
             <div class="news-title">Evento de verano</div>
             <div class="news-date">01/08/2025</div>
@@ -90,8 +111,8 @@
                 <a href="#">Leer más...</a>
             </div>
         </div>
-    </div>
+
+        </div>
 
 </body>
 </html>
-
