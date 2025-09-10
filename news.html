@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias del Servidor</title>
+    <style>
+        body {
+            /* Fondo transparente para que el color de fondo del launcher se vea */
+            background-color: transparent; 
+            /* El color del texto principal es gris claro */
+            color: #d1d1d1; 
+            /* Fuente más común en interfaces de escritorio */
+            font-family: Segoe UI, sans-serif; 
+            margin: 0;
+            padding: 10px;
+        }
+
+        h1 {
+            /* Título oculto ya que el launcher ya tiene su propio título */
+            display: none;
+        }
+
+        .news-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            /* Scroll si el contenido es demasiado largo */
+            overflow-y: auto; 
+            height: 100%;
+        }
+
+        .news-item {
+            /* Fondo del ítem ligeramente oscuro */
+            background-color: rgba(30, 30, 30, 0.7); 
+            border: 1px solid #444;
+            padding: 12px;
+            border-radius: 6px;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .news-item:hover {
+            /* Un efecto sutil al pasar el ratón */
+            background-color: rgba(45, 45, 45, 0.8);
+            border-color: #f39c12;
+        }
+
+        .news-title {
+            font-size: 16px;
+            font-weight: bold;
+            /* Color que contrasta con el tema oscuro */
+            color: #f39c12; 
+            margin-bottom: 4px;
+        }
+
+        .news-date {
+            font-size: 11px;
+            color: #a0a0a0;
+            margin-bottom: 8px;
+        }
+
+        .news-content {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        a {
+            /* Enlaces del mismo color que los títulos */
+            color: #f39c12; 
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos de la barra de desplazamiento */
+        .news-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .news-container::-webkit-scrollbar-track {
+            background: #222;
+            border-radius: 10px;
+        }
+
+        .news-container::-webkit-scrollbar-thumb {
+            background-color: #555;
+            border-radius: 10px;
+            border: 2px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="news-container">
+        <div class="news-item">
+            <div class="news-title">Actualización 1.2.0</div>
+            <div class="news-date">09/09/2025</div>
+            <div class="news-content">
+                Se ha lanzado la nueva actualización 1.2.0 con mejoras en el PvP y nuevas misiones. 
+                <a href="#">Leer más...</a>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="news-title">Evento de verano</div>
+            <div class="news-date">01/08/2025</div>
+            <div class="news-content">
+                ¡Participa en el evento de verano y consigue recompensas exclusivas! No te lo pierdas.
+                <a href="#">Leer más...</a>
+            </div>
+        </div>
+
+        </div>
+
+</body>
+</html>
